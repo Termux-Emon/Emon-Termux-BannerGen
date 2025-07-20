@@ -17,17 +17,6 @@
 ## 📸 Preview
 
 ---
-
-## 📦 Installation
-
-```bash
-pkg update -y && pkg install git -y
-git clone https://github.com/Termux-Emon/Emon-Termux-BannerGen.git
-cd Emon-Termux-BannerGen
-chmod +x emon-banner.sh
-bash emon-banner.sh
-
-
 pkg install figlet toilet cowsay lolcat -y
 
 
@@ -58,3 +47,13 @@ pkg install figlet toilet cowsay lolcat -y
 
 তুমি কি চাও আমি তোমার সব টুল একসাথে মেনু আকারে বানিয়ে দিই?  
 বললেই করে দিচ্ছি – `Emon-Termux-HackerToolkit` style! 😎🔥
+
+## 📦 Installation
+
+```bash
+pkg update -y && pkg install git -y
+git clone https://github.com/Termux-Emon/Emon-Termux-BannerGen.git
+cd Emon-Termux-BannerGen
+chmod +x emon-banner.sh
+bash emon-banner.sh
+
