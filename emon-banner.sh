@@ -1,43 +1,43 @@
 #!/bin/bash
 
-# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-# ┃   Emon-Termux-BannerGen Tool     ┃
-# ┃      Made by EMON - 2025         ┃
-# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃   Emon-Termux-BannerGen    ┃
+# ┃     Made by EMON - 2025    ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 clear
 figlet -f big "EMON BANNER" | lolcat
 
-# Colors
+# Color Variables
 cyan='\033[0;36m'
 lightgreen='\033[1;32m'
 red='\033[1;31m'
 yellow='\033[1;33m'
 
-# Welcome message
-echo -e $lightgreen "\033[1m         Termux Banner Tool by EMON "
-echo -e $yellow "\033[1m       Custom banner with your name"
+# Welcome Messages
+echo -e $lightgreen "\033[1m         Termux Banner Tool by EMON"
+echo -e $yellow "\033[1m       Create a custom startup banner"
 echo
 echo
 
-# User input for banner and cowsay
-echo -e "\033[1m\033[33mআপনার \033[31mBanner\033[33m এর নাম দিন:\033[32m "
+# Ask for user input
+echo -e "\033[1m\033[33mEnter your \033[31mBanner\033[33m name:\033[32m "
 read varbanner
 echo
-echo -e "\033[1m\033[33mআপনার \033[32mCowsay নাম দিন:\033[0m "
+echo -e "\033[1m\033[33mEnter your \033[32mCowsay\033[33m name:\033[0m "
 read varcowsay
 echo
 
-# Create files to append to bash.bashrc
+# Create files with banner commands
 echo "clear" > cl34r.txt
 echo "cowsay -f eyes \"$varcowsay\" | lolcat" > C0w54y.txt
 echo "toilet -f big \"$varbanner\" -F gay | lolcat" > 84nn3r.txt
 
-# Append to bash.bashrc
+# Append to Termux bash.bashrc startup file
 cat cl34r.txt >> /data/data/com.termux/files/usr/etc/bash.bashrc
 cat C0w54y.txt >> /data/data/com.termux/files/usr/etc/bash.bashrc
 cat 84nn3r.txt >> /data/data/com.termux/files/usr/etc/bash.bashrc
 
 # Done message
-echo -e "\n${lightgreen}✅ Banner setup সফলভাবে শেষ হয়েছে!"
-echo -e "${cyan}👉 এখন Termux পুনরায় চালু করুন এবং দেখুন EMON এর স্টাইলিশ ব্যানার!"
+echo -e "\n${lightgreen}✅ Banner setup complete!"
+echo -e "${cyan}👉 Restart Termux to see your custom EMON-style banner!"
